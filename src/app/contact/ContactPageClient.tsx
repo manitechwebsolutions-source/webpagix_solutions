@@ -11,8 +11,6 @@ import {
   CheckCircle2,
   AlertCircle,
   Clock,
-  ArrowRight,
-  Loader2,
   X,
 } from 'lucide-react';
 

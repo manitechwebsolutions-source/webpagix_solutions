@@ -72,7 +72,6 @@ function Waveform({ color, playing }: { color: string; playing: boolean }) {
         <motion.div
           key={i}
           className="w-[3px] rounded-full"
-          style={{ backgroundColor: color }}
           animate={
             playing
               ? { scaleY: [0.4, 1, 0.4], opacity: [0.6, 1, 0.6] }
