@@ -96,7 +96,9 @@ export default function AboutPageClient() {
                 <span className="text-gradient">Mission.</span>
               </motion.h1>
               <motion.p variants={staggerItem} className="section-subtitle">
-                Webpagix was born in Ongole, Andhra Pradesh, India — founded by Edara Manikanta with an obsession for technology and a belief that businesses of every size deserve world-class digital solutions.
+                Webpagix was born in Ongole, Andhra Pradesh, India, from a shared vision to make high-quality digital solutions accessible to businesses of all sizes.
+
+                Founded by Edara Manikanta, Sai, and Viswanth as Webpagix reflects a collective passion for technology, innovation, and helping businesses grow in a digital-first world.
               </motion.p>
             </motion.div>
           </div>
@@ -119,7 +121,7 @@ export default function AboutPageClient() {
                 </h2>
                 <div className="flex flex-col gap-4 text-[#6B7280] text-[15px] leading-relaxed">
                   <p>
-                    It started with a simple question: why do so many businesses struggle with their digital presence? Edara Manikanta set out to change that.
+                    It started with a simple question: why do so many businesses struggle with their digital presence? Sai, and Viswanth set out to change that.
                   </p>
                   <p>
                     Webpagix was founded in 2026 from Ongole, combining deep expertise in tech, strategy, and automation to create a studio that builds digital products that actually work.
@@ -272,7 +274,7 @@ export default function AboutPageClient() {
             </motion.div>
           </div>
         </section>
-      </main>
+      </main >
 
       <CTASection />
     </>

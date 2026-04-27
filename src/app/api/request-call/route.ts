@@ -12,78 +12,51 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const apiKey = process.env.BLAND_AI_API_KEY;
-    const agentId = process.env.BLAND_AI_AGENT_ID; // optional: use a pre-built agent
+    const { VAPI_API_KEY, VAPI_ASSISTANT_ID, VAPI_PHONE_NUMBER_ID } = process.env;
 
-    if (!apiKey || apiKey === 'your_bland_ai_api_key_here') {
-      console.error('❌ BLAND_AI_API_KEY is missing or still set to placeholder. Please add your real key to .env.local');
+    if (!VAPI_API_KEY || !VAPI_ASSISTANT_ID || !VAPI_PHONE_NUMBER_ID) {
+      console.error('❌ Vapi credentials missing. Please add VAPI_API_KEY, VAPI_ASSISTANT_ID, and VAPI_PHONE_NUMBER_ID to .env.local');
       return NextResponse.json(
         { error: 'Call service not configured. Please contact us directly.' },
         { status: 500 }
       );
     }
 
-    // Build the request body for Bland AI
-    const task = `You are a friendly AI strategy consultant for Webpagix, a growing AI automation and web development startup. 
-You are calling ${name || 'a potential client'} who is a ${role || 'business owner'} ${email ? `(email: ${email})` : ''}.
-Start by greeting them by name, briefly introduce Webpagix, and ask about their biggest digital challenge right now.
-Keep the conversation warm, concise, and helpful. Offer to schedule a follow-up with the human team if they show interest.`;
-
-    const blandPayload: Record<string, unknown> = {
-      phone_number: phone,
-      task,                       // always required by Bland AI
-      voice: 'maya',
-      language: 'en',
-      max_duration: 5,            // minutes
-      answered_by_enabled: true,
-      wait_for_greeting: true,
-      record: true,
-      metadata: {
-        name: name || '',
-        email: email || '',
-        role: role || '',
-        source: 'webpagix-cta',
+    const payload = {
+      assistantId: VAPI_ASSISTANT_ID,
+      phoneNumberId: VAPI_PHONE_NUMBER_ID,
+      customer: {
+        number: phone,
+        name: name || undefined,
       },
     };
 
-    // If a pre-built agent is configured, add it alongside task (Bland AI still requires task)
-    if (agentId) {
-      blandPayload.agent_id = agentId;
-      blandPayload.request_data = {
-        name: name || 'there',
-        role: role || 'business owner',
-        email: email || '',
-      };
-    }
-
-    const response = await fetch('https://api.bland.ai/v1/calls', {
+    // Send the data to Vapi
+    const response = await fetch('https://api.vapi.ai/call', {
       method: 'POST',
       headers: {
+        'Authorization': `Bearer ${VAPI_API_KEY}`,
         'Content-Type': 'application/json',
-        authorization: apiKey,
       },
-      body: JSON.stringify(blandPayload),
+      body: JSON.stringify(payload),
     });
 
-    const data = await response.json();
-
-    if (!response.ok || data.status === 'error') {
-      const errMsg = data.message || data.error || 'Bland AI call failed.';
-      console.error('❌ Bland AI error:', errMsg);
-      return NextResponse.json({ error: errMsg }, { status: 500 });
+    if (!response.ok) {
+      const errorData = await response.text();
+      console.error(`❌ Vapi Webhook error: ${response.status} ${response.statusText}`, errorData);
+      return NextResponse.json({ error: 'Failed to initiate call.' }, { status: 500 });
     }
 
-    console.log(`✅ Bland AI call initiated: ${data.call_id} → ${phone}`);
+    console.log(`✅ Vapi call initiated for → ${phone}`);
 
     return NextResponse.json({
       success: true,
-      callId: data.call_id,
-      message: 'Call initiated successfully.',
+      message: 'Request received successfully. Our agent will call you shortly.',
     });
   } catch (err: unknown) {
-    console.error('❌ Failed to initiate Bland AI call:', err);
+    console.error('❌ Failed to trigger Vapi call:', err);
     const message =
-      err instanceof Error ? err.message : 'Failed to initiate call.';
+      err instanceof Error ? err.message : 'Failed to process request.';
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
