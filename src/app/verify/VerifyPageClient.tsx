@@ -161,7 +161,7 @@ export default function VerifyPageClient() {
                 </div>
                 <h3 className="text-xl font-bold text-red-900 mb-2">Certificate Not Found</h3>
                 <p className="text-red-700/80">
-                  We couldn't find a valid certificate matching that code. Please check the code and try again.
+                  We couldn&apos;t find a valid certificate matching that code. Please check the code and try again.
                 </p>
               </div>
             )}

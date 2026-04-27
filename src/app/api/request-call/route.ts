@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, phone, role, email } = await req.json();
+    const { name, phone } = await req.json();
 
     // Validate required fields
     if (!phone) {
