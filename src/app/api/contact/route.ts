@@ -23,8 +23,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const toEmail = process.env.CONTACT_TO_EMAIL || 'hello@webpagix.ai';
-    const fromEmail = process.env.CONTACT_FROM_EMAIL || 'onboarding@resend.dev';
+    const toEmail = process.env.CONTACT_TO_EMAIL;
+    const fromEmail = process.env.CONTACT_FROM_EMAIL;
+
+    if (!toEmail || !fromEmail) {
+      console.error('CONTACT_TO_EMAIL or CONTACT_FROM_EMAIL is not set');
+      return NextResponse.json({ error: 'Email service not configured properly.' }, { status: 500 });
+    }
 
     const resendApiKey = process.env.RESEND_API_KEY;
     if (!resendApiKey) {

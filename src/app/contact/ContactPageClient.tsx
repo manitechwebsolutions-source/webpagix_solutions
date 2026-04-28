@@ -26,32 +26,32 @@ type FormState = {
 type SubmitStatus = 'idle' | 'loading' | 'success' | 'error';
 
 const callCountryCodes = [
-  { code: '+91',  flag: '🇮🇳', country: 'India' },
-  { code: '+1',   flag: '🇺🇸', country: 'USA / Canada' },
-  { code: '+44',  flag: '🇬🇧', country: 'UK' },
-  { code: '+61',  flag: '🇦🇺', country: 'Australia' },
+  { code: '+91', flag: '🇮🇳', country: 'India' },
+  { code: '+1', flag: '🇺🇸', country: 'USA / Canada' },
+  { code: '+44', flag: '🇬🇧', country: 'UK' },
+  { code: '+61', flag: '🇦🇺', country: 'Australia' },
   { code: '+971', flag: '🇦🇪', country: 'UAE' },
-  { code: '+65',  flag: '🇸🇬', country: 'Singapore' },
-  { code: '+49',  flag: '🇩🇪', country: 'Germany' },
-  { code: '+33',  flag: '🇫🇷', country: 'France' },
-  { code: '+81',  flag: '🇯🇵', country: 'Japan' },
-  { code: '+86',  flag: '🇨🇳', country: 'China' },
-  { code: '+55',  flag: '🇧🇷', country: 'Brazil' },
-  { code: '+27',  flag: '🇿🇦', country: 'South Africa' },
-  { code: '+92',  flag: '🇵🇰', country: 'Pakistan' },
+  { code: '+65', flag: '🇸🇬', country: 'Singapore' },
+  { code: '+49', flag: '🇩🇪', country: 'Germany' },
+  { code: '+33', flag: '🇫🇷', country: 'France' },
+  { code: '+81', flag: '🇯🇵', country: 'Japan' },
+  { code: '+86', flag: '🇨🇳', country: 'China' },
+  { code: '+55', flag: '🇧🇷', country: 'Brazil' },
+  { code: '+27', flag: '🇿🇦', country: 'South Africa' },
+  { code: '+92', flag: '🇵🇰', country: 'Pakistan' },
   { code: '+880', flag: '🇧🇩', country: 'Bangladesh' },
-  { code: '+82',  flag: '🇰🇷', country: 'South Korea' },
-  { code: '+60',  flag: '🇲🇾', country: 'Malaysia' },
+  { code: '+82', flag: '🇰🇷', country: 'South Korea' },
+  { code: '+60', flag: '🇲🇾', country: 'Malaysia' },
   { code: '+966', flag: '🇸🇦', country: 'Saudi Arabia' },
   { code: '+971', flag: '🇦🇪', country: 'UAE' },
-  { code: '+90',  flag: '🇹🇷', country: 'Turkey' },
-  { code: '+20',  flag: '🇪🇬', country: 'Egypt' },
+  { code: '+90', flag: '🇹🇷', country: 'Turkey' },
+  { code: '+20', flag: '🇪🇬', country: 'Egypt' },
   { code: '+234', flag: '🇳🇬', country: 'Nigeria' },
-  { code: '+31',  flag: '🇳🇱', country: 'Netherlands' },
-  { code: '+34',  flag: '🇪🇸', country: 'Spain' },
-  { code: '+39',  flag: '🇮🇹', country: 'Italy' },
-  { code: '+52',  flag: '🇲🇽', country: 'Mexico' },
-  { code: '+7',   flag: '🇷🇺', country: 'Russia' },
+  { code: '+31', flag: '🇳🇱', country: 'Netherlands' },
+  { code: '+34', flag: '🇪🇸', country: 'Spain' },
+  { code: '+39', flag: '🇮🇹', country: 'Italy' },
+  { code: '+52', flag: '🇲🇽', country: 'Mexico' },
+  { code: '+7', flag: '🇷🇺', country: 'Russia' },
 ];
 
 const CALL_ISO_TO_DIAL: Record<string, string> = {
@@ -75,8 +75,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email Us',
-    value: 'hello@webpagix.ai',
-    href: 'mailto:hello@webpagix.ai',
+    value: 'info@webpagixsolutions.com',
+    href: 'mailto:info@webpagixsolutions.com',
   },
   {
     icon: Phone,
@@ -142,7 +142,7 @@ export default function ContactPageClient() {
         const dial = CALL_ISO_TO_DIAL[d.country_code as string];
         if (dial) setCallCountryCode(dial);
       })
-      .catch(() => {})
+      .catch(() => { })
       .finally(() => {
         setCallDetecting(false);
         setTimeout(() => phoneInputRef.current?.focus(), 50);
@@ -736,9 +736,8 @@ export default function ContactPageClient() {
                       />
 
                       {/* Phone row */}
-                      <div className={`flex rounded-lg border overflow-hidden transition-colors ${
-                        callStatus === 'error' ? 'border-red-400' : 'border-gray-200'
-                      } focus-within:ring-2 focus-within:ring-[#0FADA8] focus-within:border-[#0FADA8]`}>
+                      <div className={`flex rounded-lg border overflow-hidden transition-colors ${callStatus === 'error' ? 'border-red-400' : 'border-gray-200'
+                        } focus-within:ring-2 focus-within:ring-[#0FADA8] focus-within:border-[#0FADA8]`}>
                         {/* Country code */}
                         <div className="relative shrink-0">
                           <select
@@ -746,9 +745,8 @@ export default function ContactPageClient() {
                             onChange={(e) => setCallCountryCode(e.target.value)}
                             disabled={callDetecting}
                             style={{ width: '5.5rem' }}
-                            className={`h-full appearance-none border-r border-gray-200 pl-2.5 pr-5 py-2.5 text-sm font-medium text-gray-700 focus:outline-none cursor-pointer transition-colors ${
-                              callDetecting ? 'bg-gray-100 text-gray-400' : 'bg-gray-50'
-                            }`}
+                            className={`h-full appearance-none border-r border-gray-200 pl-2.5 pr-5 py-2.5 text-sm font-medium text-gray-700 focus:outline-none cursor-pointer transition-colors ${callDetecting ? 'bg-gray-100 text-gray-400' : 'bg-gray-50'
+                              }`}
                           >
                             {callCountryCodes.map(({ code, flag, country }) => (
                               <option key={code + country} value={code}>
