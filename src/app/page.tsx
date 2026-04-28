@@ -7,9 +7,9 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import CTASection from '@/components/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Webpagix.ai — We Build. We Automate. We Scale.',
+  title: 'Webpagix Solutions — Enterprise AI Automation & Web Development',
   description:
-    'Webpagix is an AI automation and web development startup from Hyderabad, India. We build intelligent digital solutions that drive real business results.',
+    'Webpagix Solutions is a premier AI automation and custom web development agency headquartered in Ongole, with offices in Michigan and Florida. We build intelligent digital solutions that drive real business results.',
 };
 
 export default function HomePage() {

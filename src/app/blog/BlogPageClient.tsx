@@ -5,68 +5,7 @@ import { staggerContainer, staggerItem, fadeUp } from '@/lib/animations';
 import { ArrowRight, Clock, Tag } from 'lucide-react';
 import Link from 'next/link';
 
-const posts = [
-  {
-    slug: 'ai-automation-small-business',
-    category: 'AI Automation',
-    title: '5 Ways AI Automation Can Save Small Businesses 20+ Hours a Week',
-    excerpt:
-      'Discover the practical, high-impact ways AI tools can eliminate repetitive tasks, streamline operations, and free your team to focus on growth.',
-    readTime: '6 min read',
-    date: 'Apr 8, 2026',
-    featured: true,
-  },
-  {
-    slug: 'nextjs-vs-vite-2026',
-    category: 'Web Development',
-    title: 'Next.js 14 vs Vite in 2026: Which Should You Choose?',
-    excerpt:
-      'A deep dive into the trade-offs between Next.js 14 and Vite for modern web applications — performance, DX, and real-world considerations.',
-    readTime: '8 min read',
-    date: 'Apr 2, 2026',
-    featured: false,
-  },
-  {
-    slug: 'seo-nextjs-14-guide',
-    category: 'SEO & Growth',
-    title: 'The Complete SEO Guide for Next.js 14 App Router',
-    excerpt:
-      'Everything you need to know about implementing server-side SEO metadata, Open Graph tags, sitemaps, and structured data in Next.js 14.',
-    readTime: '10 min read',
-    date: 'Mar 25, 2026',
-    featured: false,
-  },
-  {
-    slug: 'hyderabad-tech-startup-ecosystem',
-    category: 'Startup',
-    title: 'Why Hyderabad is Becoming India\'s Next Silicon Valley',
-    excerpt:
-      'An inside look at the booming tech startup ecosystem in Hyderabad — the funding, talent, and innovation driving rapid growth.',
-    readTime: '5 min read',
-    date: 'Mar 18, 2026',
-    featured: false,
-  },
-  {
-    slug: 'workflow-automation-crm',
-    category: 'AI Automation',
-    title: 'How We Automated a Client\'s Entire CRM Pipeline (Case Study)',
-    excerpt:
-      'A step-by-step case study of how we built a fully automated lead-to-close CRM workflow that saves a real estate agency 45 hours a month.',
-    readTime: '7 min read',
-    date: 'Mar 10, 2026',
-    featured: false,
-  },
-  {
-    slug: 'react-server-components-explained',
-    category: 'Web Development',
-    title: 'React Server Components: A Practical Guide for 2026',
-    excerpt:
-      'Cut through the hype. Here\'s a clear, practical explanation of React Server Components, when to use them, and common pitfalls to avoid.',
-    readTime: '9 min read',
-    date: 'Feb 28, 2026',
-    featured: false,
-  },
-];
+import { posts } from '@/data/posts';
 
 const categories = ['All', 'AI Automation', 'Web Development', 'SEO & Growth', 'Startup'];
 

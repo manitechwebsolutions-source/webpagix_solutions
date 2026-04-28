@@ -70,10 +70,10 @@ export default function Footer() {
 
           {/* Brand Column */}
           <div className="flex flex-col gap-4">
-            <Link href="/" aria-label="Webpagix home" className="flex items-center">
+            <Link href="/" aria-label="Webpagix Solutions home" className="flex items-center">
               <Image
                 src="/logo.png"
-                alt="Webpagix logo"
+                alt="Webpagix Solutions logo"
                 width={150}
                 height={50}
                 className="h-22 w-auto"
@@ -137,9 +137,9 @@ export default function Footer() {
             <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-4">Contact</h3>
             <ul className="flex flex-col gap-3 text-sm text-[#6B7280]">
               <li>
-                <a href="mailto:info@webpagix.ai" className="flex items-center gap-2 hover:text-[#0FADA8] transition-colors">
+                <a href="mailto:info@webpagixsolutions.com" className="flex items-center gap-2 hover:text-[#0FADA8] transition-colors">
                   <Mail size={13} className="text-[#0FADA8] shrink-0" />
-                  info@webpagix.ai
+                  info@webpagixsolutions.com
                 </a>
               </li>
               <li>
@@ -167,7 +167,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-100 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-[#6B7280]">
-            © {new Date().getFullYear()} Webpagix solutions. All rights reserved.
+            © {new Date().getFullYear()} Webpagix Solutions. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="text-xs text-[#6B7280] hover:text-[#0FADA8] transition-colors">

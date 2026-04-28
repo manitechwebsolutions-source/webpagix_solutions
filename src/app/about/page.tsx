@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import AboutPageClient from './AboutPageClient';
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'About Us | Webpagix Solutions',
   description:
-    'Meet Edara Manikanta, the founder behind Webpagix — an AI automation and web development startup founded in Hyderabad, India, with a mission to build smarter digital solutions.',
+    'Meet Edara Manikanta, the founder behind Webpagix Solutions — a premier AI automation and custom web development agency headquartered in Ongole, with offices in Michigan and Florida.',
 };
 
 export default function AboutPage() {

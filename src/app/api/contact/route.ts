@@ -39,10 +39,10 @@ export async function POST(req: NextRequest) {
     const resend = new Resend(resendApiKey);
 
     const { error } = await resend.emails.send({
-      from: `Webpagix Contact <${fromEmail}>`,
+      from: `Webpagix Solutions Contact <${fromEmail}>`,
       to: [toEmail],
       replyTo: email,
-      subject: `[Webpagix] New enquiry from ${name} — ${service}`,
+      subject: `[Webpagix Solutions] New enquiry from ${name} — ${service}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -64,7 +64,7 @@ export async function POST(req: NextRequest) {
                           🚀 New Contact Form Submission
                         </h1>
                         <p style="margin:8px 0 0;color:rgba(255,255,255,0.8);font-size:14px;">
-                          Someone wants to work with Webpagix!
+                          Someone wants to work with Webpagix Solutions!
                         </p>
                       </td>
                     </tr>
@@ -132,7 +132,7 @@ export async function POST(req: NextRequest) {
                     <tr>
                       <td style="background:#f9fafb;padding:24px 40px;border-top:1px solid #e5e7eb;">
                         <p style="margin:0;font-size:12px;color:#9ca3af;text-align:center;">
-                          This email was sent from the contact form at <strong>webpagix.ai</strong>
+                          This email was sent from the contact form at <strong>webpagixsolutions.com</strong>
                         </p>
                       </td>
                     </tr>

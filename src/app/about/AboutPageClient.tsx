@@ -31,7 +31,7 @@ const founders = [
     role: 'Founder & CEO',
     photo: '/team/manikanta.jpg',
     initials: 'EM',
-    bio: 'Edara Manikanta is the visionary behind Webpagix. With deep expertise in AI systems, web development, and business strategy, he founded Webpagix in Ongole, Andhra Pradesh, India  to help businesses of every size access world-class digital solutions and intelligent automation.',
+    bio: 'Edara Manikanta is the visionary behind Webpagix Solutions. With deep expertise in AI systems, web development, and business strategy, he founded Webpagix Solutions in Ongole, Andhra Pradesh, India  to help businesses of every size access world-class digital solutions and intelligent automation.',
     skills: ['AI Automation', 'Web Development', 'Business Strategy', 'Cloud Architecture'],
     socials: { linkedin: 'https://www.linkedin.com/in/edara-manikanta', twitter: '#', instagram: '#' },
     gradient: 'from-[#0FADA8] to-[#0a8a86]',
@@ -41,7 +41,7 @@ const founders = [
     role: 'CTO / Advisor',
     photo: null,
     initials: 'V',
-    bio: 'Viswanth brings deep technical leadership and strategic advisory experience to Webpagix. He oversees technology architecture decisions and guides the team in building secure, scalable, and future-ready systems.',
+    bio: 'Viswanth brings deep technical leadership and strategic advisory experience to Webpagix Solutions. He oversees technology architecture decisions and guides the team in building secure, scalable, and future-ready systems.',
     skills: ['System Architecture', 'Technical Advisory', 'Cloud Infrastructure', 'Engineering Leadership'],
     socials: { linkedin: '#', twitter: '#', instagram: '#' },
     gradient: 'from-[#6C63FF] to-[#4B44CC]',
@@ -51,7 +51,7 @@ const founders = [
     role: 'CTO / Director of Sales',
     photo: null,
     initials: 'S',
-    bio: "Sai combines sharp technical insight with powerful sales leadership. He drives Webpagix's revenue growth while ensuring client solutions are technically sound, aligned with business goals, and delivered with excellence.",
+    bio: "Sai combines sharp technical insight with powerful sales leadership. He drives Webpagix Solutions' revenue growth while ensuring client solutions are technically sound, aligned with business goals, and delivered with excellence.",
     skills: ['Sales Strategy', 'Revenue Growth', 'Technical Sales', 'Client Relations'],
     socials: { linkedin: '#', twitter: '#', instagram: '#' },
     gradient: 'from-[#F59E0B] to-[#D97706]',
@@ -96,9 +96,9 @@ export default function AboutPageClient() {
                 <span className="text-gradient">Mission.</span>
               </motion.h1>
               <motion.p variants={staggerItem} className="section-subtitle">
-                Webpagix was born in Ongole, Andhra Pradesh, India, from a shared vision to make high-quality digital solutions accessible to businesses of all sizes.
+                Webpagix Solutions was born in Ongole, Andhra Pradesh, India, from a shared vision to make high-quality digital solutions accessible to businesses of all sizes.
 
-                Founded by Edara Manikanta, Sai, and Viswanth as Webpagix reflects a collective passion for technology, innovation, and helping businesses grow in a digital-first world.
+                Founded by Edara Manikanta, Sai, and Viswanth as Webpagix Solutions reflects a collective passion for technology, innovation, and helping businesses grow in a digital-first world.
               </motion.p>
             </motion.div>
           </div>
@@ -124,7 +124,7 @@ export default function AboutPageClient() {
                     It started with a simple question: why do so many businesses struggle with their digital presence? Sai, and Viswanth set out to change that.
                   </p>
                   <p>
-                    Webpagix was founded in 2026 from Ongole, combining deep expertise in tech, strategy, and automation to create a studio that builds digital products that actually work.
+                    Webpagix Solutions was founded in 2026 from Ongole, combining deep expertise in tech, strategy, and automation to create a studio that builds digital products that actually work.
                   </p>
                   <p>
                     We&apos;ve already shipped production web apps for healthcare and e-commerce clients, and we&apos;ve developed a suite of AI voice agent demos tailored for industries like manufacturing, retail, and healthcare — ready to be deployed.

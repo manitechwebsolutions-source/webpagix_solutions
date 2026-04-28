@@ -306,8 +306,7 @@ export default function ContactPageClient() {
                   Contact Information
                 </h2>
                 <p className="text-[#6B7280] text-sm mb-6">
-                  Reach us through any of these channels. We&apos;re based in
-                  Hyderabad and serve clients globally.
+                  Reach us through any of these channels. We&apos;re headquartered in Ongole with offices in Michigan and Florida, serving clients globally.
                 </p>
                 <div className="flex flex-col gap-4">
                   {contactInfo.map(({ icon: Icon, label, value, href }) => (
