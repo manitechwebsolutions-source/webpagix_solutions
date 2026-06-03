@@ -38,5 +38,15 @@
     "endDate": "2026-04-18",
     "status": "Completed",
     "issuedDate": "2026-04-27"
+  },
+  "WPS-INT-2026-05":{
+    "name": "Somula Venkateswarlu",
+    "role": "AI & ML Intern",
+    "projectTitle": "Cat vs Dog Image Classification Using Deep Learning and Convolutional Neural Networks.",
+    "internshipMode": "Hybrid",
+    "startDate": "2026-05-11",
+    "endDate": "2026-06-11",
+    "status": "Completed",
+    "issuedDate": "2026-06-12"
   }
 }
