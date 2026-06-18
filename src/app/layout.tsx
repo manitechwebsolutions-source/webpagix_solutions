@@ -105,12 +105,15 @@ export default function RootLayout({
         <Footer />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-92J6B7FQ45" 
           strategy="afterInteractive"/>
-        <Script id="google-analytics" strategy="afterInteractive">
-          {' 
-          window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js',new Date());
-        gtag('config','G-92J6B7FQ45');'}</Script>
+       <Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-92J6B7FQ45');
+  `}
+</Script>
       </body>
     </html>
   );
